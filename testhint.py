@@ -13,11 +13,12 @@ from Executor import Executor
 import argparse
 
 parser = argparse.ArgumentParser(description='Testing of the queries')
+parser.add_argument('evaluated_queries', type=str)
 parser.add_argument('model_inp_path', type = str)
 args = parser.parse_args()
 
 
-with open('job_train_qs.pkl', 'rb') as f:
+with open(args.evaluated_queries, 'rb') as f:
     job_queries = pickle.load(f)
 
 

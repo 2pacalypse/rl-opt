@@ -29,5 +29,12 @@ The output is the split 2 files named job_train_qs.pkl and job_test_qs.pkl.
     if you run it for the first time, it makes sense to start like this
         example run: `python3 traininf.py job_train_qs.pkl job_train_qs.pkl expout modelout 20 10`
     
-    once you have the generated experiences under exp_output_dir then you can start with them by
+    once you have the generated experiences under exp_output_dir then you can continue with them by
         `python3 traininf.py job_train_qs.pkl exp_output_dir/540.pkl expout modelout 20 10`
+
+    so for example, the second example will train a model from 540 queries, and then when all the epochs are over
+    it will evaluate the trained net's performance on the job_train_qs which is of size 90, and the train_queries
+    will be updated with these fresh 90 experience, so it will continue with 630 queries, 700, and so on. Depending on
+    the output frequency, it will output these cumulative experiences.
+
+    
