@@ -84,7 +84,6 @@ args = parser.parse_args()
 
 with open(args.eval_queries, 'rb') as f:
     eval_queries = pickle.load(f)
-    eval_queries, _ = split_train_test(eval_queries)
 
 with open (args.train_queries, 'rb') as f:
     train_queries = pickle.load(f)

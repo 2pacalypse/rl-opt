@@ -17,10 +17,9 @@ parser.add_argument('model_inp_path', type = str)
 args = parser.parse_args()
 
 
-with open('job_queries.pkl', 'rb') as f:
+with open('job_train_qs.pkl', 'rb') as f:
     job_queries = pickle.load(f)
 
-train_qs, test_qs = split_train_test(job_queries)
 
 
 
@@ -29,7 +28,7 @@ net = torch.load(args.model_inp_path)
 
 
 q_hs = []
-for q in train_qs:
+for q in job_queries:
     hinttree = hint(q, net)
     hints = get_hints(hinttree)
     hinttext = prep_hinttext(hints)
