@@ -56,7 +56,7 @@ The output is the split 2 files named job_train_qs.pkl and job_test_qs.pkl.
 
 -  Query.py: A wrapper for the queries, it caches some of the query related information.
 
-- utils.py: most of the work is here including the plan search, parsing, featurization.
+- utils.py: most of the work is here including the plan search, parsing, featurization, hinting.
 
 - treeutils.py: we use python tuples to represent trees, there are a few helpers.
 
