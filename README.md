@@ -59,3 +59,15 @@ The output is the split 2 files named job_train_qs.pkl and job_test_qs.pkl.
 - utils.py: most of the work is here including the plan search, parsing, featurization.
 
 - treeutils.py: we use python tuples to represent trees, there are a few helpers.
+
+- 95670.pt: this is a sample model
+
+- a sample experience pickle: https://drive.google.com/open?id=1HhL6uHCkT-M5TDdKPZfjoSsgL-M-_Kjq
+
+    this is the result from running the training for almost 900 episodes. when this file is loaded into the memory
+    it will be a list of Query objects and then you can see the performances for each episode by checking the appropriate slices
+    e.g. exp[0:90], exp[90:180], exp[180:270], and so on. what is good in this file is that the Query object stores the cost
+    of the plan along with the hinttext, querytext, and so on. so one can see the episode performances by checking the costs of
+    90 queries like that.
+
+
