@@ -5,7 +5,7 @@ import json
 from Query import Query
 import pickle
 from utils import featurize_query
-query_set = "../join-order-benchmark" #query dir
+query_set = "./join-order-benchmark" #query dir
 
 cwd = os.getcwd()
 querydir = os.path.join(cwd, query_set)
