@@ -72,9 +72,9 @@ def evaluate(train_qs, net):
         hintlist = get_hints(hinttree)
         hinttext = prep_hinttext(hintlist)
         q_h = Query(q.querytext, hinttext, q.ast)
-        print(q.cost, q_h.cost)
+        print("real & hinted: ", q.cost, q_h.cost)
         hinted_qs.append(q_h)
-    print('total log cost real, total log cost trained', sum([np.log(q.cost) for q in train_qs]), sum([np.log( q.cost) for q in hinted_qs]))
+    print('sum(log(real)) sum(log(hinted)): ', sum([np.log(q.cost) for q in train_qs]), sum([np.log( q.cost) for q in hinted_qs]))
 
     return hinted_qs
 
