@@ -1,15 +1,6 @@
 from utils import connect
 class Expert:
 
-    #for tree
-    join_types = ['Nested Loop', 'Hash Join', 'Merge Join']
-    scan_types = ['Seq Scan', 'Index Scan', 'Bitmap Heap Scan', 'Index Only Scan']
-
-    #for ast
-    binary_ops = {'eq', 'neq', 'lt', 'gt', 'lte', 'gte', 'like', 'nlike', 'in', 'nin'}
-    unary_ops = {'exists', 'missing'}
-    ternary_ops = {'between', 'not between'}
-
     def __init__(self):
         self.conn = connect()
 
