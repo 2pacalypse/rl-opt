@@ -43,7 +43,7 @@ The output is the split 2 files named job_train_qs.pkl and job_test_qs.pkl.
     it takes a pickle file containing queries and also a model and it outputs the costs of the queries and the resulting costs
     from the model.    
 
-example run: `python3 testhint.py job_train_qs.pkl 540.pt`
+    example run: `python3 testhint.py job_train_qs.pkl 540.pt`
              `python3 testhint.py job_test_qs.pkl 9000.pt`
 
 - config.py: contains the device (gpu/cpu) for Pytorch, and also database related credentials.
